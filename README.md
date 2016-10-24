@@ -2,6 +2,10 @@
 
 An example demonstrating Jenkins S2I features for installing plugins, configuring jobs, Jenkins, etc and using slave pods for Jenkins jobs.
 
+**NOTE:** This fork of Siamak Sadeghianfar's original repository uses the `centos` base image, as a workaround for the original base `rhel` image throwing the following error on build:
+
+    nfs_wrapper is not installed
+
 ## Installation
 
 1. Create a new OpenShift project, where the Jenkins server will run:
