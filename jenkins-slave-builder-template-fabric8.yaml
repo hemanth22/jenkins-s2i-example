@@ -57,7 +57,7 @@ parameters:
   displayName: Jenkins Slave Label
   name: SLAVE_LABEL
   required: true
-  value: jdk8
+  value: fabric8
 - description: Git repository with Dockerfile and slave entrypoint.
   displayName: Repository URL
   name: SLAVE_REPO_URL
