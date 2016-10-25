@@ -2,13 +2,16 @@
 
 An example demonstrating Jenkins S2I features for installing plugins, configuring jobs, Jenkins, etc and using slave pods for Jenkins jobs.
 
-**NOTE:** This fork of Siamak Sadeghianfar's original repository uses the `centos` base image, as a workaround for the original base `rhel` image throwing the following error on build:
+## About this fork
 
-    nfs_wrapper is not installed
+This is a fork of Siamak Sadeghianfar's original repository, with the following differences:
 
-## Installation
+- It uses the `centos` base image, as a workaround for the original base `rhel` image throwing the error on build `nfs_wrapper is not installed"`
+- A local standalone Nexus can be used as a Maven mirror to speed up builds (good for those long, cup-of-tea, toilet-break style Maven builds). Edit the file `slave/configuration/mirror-settings.xml` to suit your requirements. Then modify the build in Jenkins by going to the build > Configure > Build > Advanced > change Settings file path to `${JENKINS_HOME}/mirror-settings.xml`.
 
-1. Create a new OpenShift project, where the Jenkins server will run:
+## installation
+
+1. create a new openshift project, where the jenkins server will run:
 
   ```
   $ oc new-project ci --display-name="CI/CD"
