@@ -7,7 +7,7 @@ metadata:
     description: Provide a convenient way to convert an image to a Jenkins slave image
     iconClass: icon-jenkins
     tags: instant-app,jenkins
-  name: jenkins-slave-builder
+  name: jenkins-slave-builder-fabric8
 objects:
 - apiVersion: v1
   kind: ImageStream
