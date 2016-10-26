@@ -6,7 +6,7 @@ RUN curl -O https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.r
     rm epel-release-latest-7*.rpm
 
 RUN yum clean all && \
-    export INSTALL_PKGS="nss_wrapper gettext" && \
+    export INSTALL_PKGS="nss_wrapper gettext tar git" && \
     yum clean all && \
     yum install -y --setopt=tsflags=nodocs $INSTALL_PKGS && \
     rpm -V $INSTALL_PKGS && \
@@ -17,6 +17,7 @@ RUN yum clean all && \
 
 # Copy the entrypoint
 COPY configuration/* /var/lib/jenkins/
+#USER 1001
 
 # Run the JNLP client by default
 # To use swarm client, specify "/var/lib/jenkins/run-swarm-client" as Command
