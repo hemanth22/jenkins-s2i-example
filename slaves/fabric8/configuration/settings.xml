@@ -11,17 +11,26 @@
         </proxy>
     </proxies>
     -->
-    <servers>
-        <server>
-            <id>internalSnapshots</id>
-            <username>deployment</username>
-            <password>deployment123</password>
-        </server>
-        <server>
-            <id>internalReleases</id>
-            <username>deployment</username>
-            <password>deployment123</password>
-        </server>
-    </servers>
+  <mirrors>
+    <mirror>
+      <!--This sends everything else to /public -->
+      <id>nexus</id>
+      <mirrorOf>*</mirrorOf>
+      <url>http://10.1.2.1:8081/nexus/content/groups/public/</url>
+    </mirror>
+  </mirrors>
+
+  <servers>
+    <server>
+      <id>internalSnapshots</id>
+      <username>deployment</username>
+      <password>deployment123</password>
+    </server>
+    <server>
+      <id>internalReleases</id>
+      <username>deployment</username>
+      <password>deployment123</password>
+    </server>
+  </servers>
 </settings>
 
