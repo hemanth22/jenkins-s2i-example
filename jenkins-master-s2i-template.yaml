@@ -17,7 +17,7 @@ parameters:
   value: https://github.com/monodot/jenkins-s2i-example.git
 - description: Git branch/tag reference
   name: SOURCE_REPOSITORY_REF
-  value: develop
+  value: master
 - description: Path within Git project to build; empty for root project directory.
   name: CONTEXT_DIR
   value: master
