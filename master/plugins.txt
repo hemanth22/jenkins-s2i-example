@@ -1,0 +1,9 @@
+git:2.4.4
+scm-api:1.0
+git-client:1.19.6
+greenballs:1.15
+groovy:1.29
+openshift-pipeline:1.0.28
+maven-plugin:2.14
+pipeline-utility-steps:1.1.6
+envinject:1.93.1
